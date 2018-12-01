@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author Arthur
  */
 public class Treinador {
-    private float vidaTotal;
+    public float vidaTotal;
     Pokemon p1;
     Pokemon p2;
     Pokemon p3;

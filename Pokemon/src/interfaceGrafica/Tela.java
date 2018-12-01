@@ -6,31 +6,34 @@
 package interfaceGrafica;
 import pokemon.*;
 import classesPokemons.*;
+import pokemon.Treinador;
 /**
  *
  * @author Alorya
  */
 public class Tela extends javax.swing.JFrame {
     public int i=0;
-    Pokemon p1 = new Pikachu();
-    Pokemon p2 = new Blastoise();
-    Pokemon p3 = new Bulbassauro();
-    Pokemon p4 = new Charizard();
-    Pokemon p5 = new Charmander();
-    Pokemon p6 = new Flareon();
-    Pokemon p7 = new Gyrados();
-    Pokemon p8 = new Jolteon();
-    Pokemon p9 = new Onix();
-    Pokemon p10 = new Venossauro();
-    Pokemon p11 = new Vaporeon();
-    Pokemon p12 = new Squirtle();
-    Time t1 = new Time(p5,p11,p10);
-    Time t2 = new Time(p12,p6,p7);
-    Time t3 = new Time(p3,p8,p2);
-    Time t4 = new Time(p1,p4,p9);
-    Time timeA;
-    Time timeB;
-    
+    public Pokemon p1 = new Pikachu();
+    public Pokemon p2 = new Blastoise();
+    public Pokemon p3 = new Bulbassauro();
+    public Pokemon p4 = new Charizard();
+    public Pokemon p5 = new Charmander();
+    public Pokemon p6 = new Flareon();
+    public Pokemon p7 = new Gyrados();
+    public Pokemon p8 = new Jolteon();
+    public Pokemon p9 = new Onix();
+    public Pokemon p10 = new Venossauro();
+    public Pokemon p11 = new Vaporeon();
+    public Pokemon p12 = new Squirtle();
+    public Time t1 = new Time(p5,p11,p10);
+    public Time t2 = new Time(p12,p6,p7);
+    public Time t3 = new Time(p3,p8,p2);
+    public Time t4 = new Time(p1,p4,p9);
+    public Time timeA;
+    public Time timeB;
+    public Treinador treinadorA;
+    public Treinador treinadorB;
+
     
     /**
      * Creates new form Tela
@@ -51,6 +54,8 @@ public class Tela extends javax.swing.JFrame {
     private void initComponents() {
 
         batalha = new javax.swing.JPanel();
+        iniciarBatalha = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         escolherTime = new javax.swing.JPanel();
         time1 = new javax.swing.JButton();
         time2 = new javax.swing.JButton();
@@ -66,6 +71,20 @@ public class Tela extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         batalha.setLayout(null);
+
+        iniciarBatalha.setText("Iniciar Batalha!");
+        iniciarBatalha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iniciarBatalhaActionPerformed(evt);
+            }
+        });
+        batalha.add(iniciarBatalha);
+        iniciarBatalha.setBounds(570, 20, 150, 50);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cgfd.png"))); // NOI18N
+        batalha.add(jLabel3);
+        jLabel3.setBounds(0, 0, 1280, 720);
+
         getContentPane().add(batalha);
         batalha.setBounds(0, 0, 1280, 720);
 
@@ -157,16 +176,15 @@ public class Tela extends javax.swing.JFrame {
         if(i==0){
             System.out.println("Jogador 1 escolheu time 3");
             timeA=t3;
-            i=1;
-            Treinador A = new Treinador(timeA);
+            i=1;            
         }
         else{
             System.out.println("Jogador 2 escolheu time 3");
             i=0;
             timeB=t3;
-            Treinador B = new Treinador(timeB);
             escolherTime.setVisible(false);
             batalha.setVisible(true);
+            atribuiTimes();
         }     
     }//GEN-LAST:event_time3ActionPerformed
 
@@ -175,52 +193,63 @@ public class Tela extends javax.swing.JFrame {
             System.out.println("Jogador 1 escolheu time 2");
             i=1;
             timeA=t2;
-            Treinador A = new Treinador(timeA);
         }
         else{
             System.out.println("Jogador 2 escolheu time 2");
             i=0;
             timeB=t2;
-            Treinador B = new Treinador(timeB);
             escolherTime.setVisible(false);
             batalha.setVisible(true);
+            atribuiTimes();
         }  
     }//GEN-LAST:event_time2ActionPerformed
 
     private void time1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_time1ActionPerformed
-                if(i==0){
+        if(i==0){
             System.out.println("Jogador 1 escolheu time 1");
             i=1;
             timeA=t1;
-            Treinador A = new Treinador(timeA);
         }
         else{
             System.out.println("Jogador 2 escolheu time 1");
             i=0;
             timeB=t1;
-            Treinador B = new Treinador(timeB);
             escolherTime.setVisible(false);
             batalha.setVisible(true);
+            atribuiTimes();
         }  
     }//GEN-LAST:event_time1ActionPerformed
 
     private void time4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_time4ActionPerformed
-                if(i==0){
+        if(i==0){
             System.out.println("Jogador 1 escolheu time 4");
             i=1;
             timeA=t4;
-            Treinador A = new Treinador(timeA);
         }
         else{
             System.out.println("Jogador 2 escolheu time 4");
             i=0;
             timeB=t4;
-            Treinador B = new Treinador(timeB);
             escolherTime.setVisible(false);
             batalha.setVisible(true);
+            atribuiTimes();
         }  
     }//GEN-LAST:event_time4ActionPerformed
 
+    private void atribuiTimes(){
+        treinadorA = new Treinador(timeA);
+        treinadorB = new Treinador(timeB);
+    }
+   
+    
+    private void iniciarBatalhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarBatalhaActionPerformed
+        iniciarBatalha.setVisible(false);
+        if(timeA!=null&&timeB!=null){
+            Batalha Bat = new Batalha(treinadorA, treinadorB);
+            Bat.comecarBatalha();
+        }
+    }//GEN-LAST:event_iniciarBatalhaActionPerformed
+    
     /**
      * @param args the command line arguments
      */
@@ -256,8 +285,10 @@ public class Tela extends javax.swing.JFrame {
     private javax.swing.JPanel batalha;
     private javax.swing.JButton comecarJogo;
     private javax.swing.JPanel escolherTime;
+    private javax.swing.JButton iniciarBatalha;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel telaInicial;
     private javax.swing.JButton time1;
     private javax.swing.JButton time2;
