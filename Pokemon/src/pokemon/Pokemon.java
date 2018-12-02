@@ -11,47 +11,85 @@ public class Pokemon {
     /**
      *Nome do pokemon
      */
-    public String nome;
+    protected String nome;
+    
+    public String getNome(){
+        return nome;
+    }
+    
+    public void setNome(String nome){
+        this.nome=nome;
+    }
 
     /**
      *string do tipo do pokemon 
      */
-    public String nomeTipo;
+    protected String nomeTipo;
+    
+    public String getNomeTipo(){
+        return nomeTipo;
+    }
+    
+    public void setNomeTipo(String nomeTipo){
+        this.nomeTipo=nomeTipo;
+    }
+    
 
     /**
      * tipo do pokemon : Agua,Eletrico...etc
      */
-    public int tipo; 
+    protected int tipo; 
+    
+    public int getTipo(){
+        return tipo;
+    }
+    
+    public void setTipo(int tipo){
+        this.tipo=tipo;
+    }
 
     /**
      *  vetor das habilidades de ataque do pokemon 
      */
-    public String[] habilidades = new String[3];
+    protected String[] habilidades = new String[3];
+    
+    public String[] getHabilidades(){
+        return habilidades;
+    }
+    
 
     /**
      *Multiplicador das habiliades de acordo com seu dano
      */
-    public float[] multiHabilidades = {2,1.5f,1,0};
+    protected float[] multiHabilidades = {2,1.5f,1,0};
 
     /**
      *custa de uso de cada habilidade
      */
-    public int[] manaPoints = {75,50,25,0};
+    protected int[] manaPoints = {75,50,25,0};
 
     /**
      *vida do pokemon
      */
-    public float healthPoints;
+    protected float healthPoints;
+    
+    public float getHealthPoints(){
+        return healthPoints;
+    }
+    
+    public void setHealthPoints(float healthPoints){
+        this.healthPoints=healthPoints;
+    }
 
     /**
      *dano apos verificar vantagens e desvantagens
      */
-    public float danoAtual = 10;
+    protected float danoAtual = 10;
 
     /**
      *dano do pokemon
      */
-    public float dano;
+    protected float dano;
 
   
        
@@ -60,7 +98,7 @@ public class Pokemon {
     /**
      *vetor de vantanges contra outros tipos
      */
-        public int[] vantagens; 
+        protected int[] vantagens; 
 
    
         

@@ -14,23 +14,23 @@ import java.util.Scanner;
  * @author Arthur
  */
 public class Treinador {
-    public float vidaTotal;
-    Pokemon p1;
-    Pokemon p2;
-    Pokemon p3;
-    Pokemon p4;
-    Pokemon p5;
-    Pokemon p6;
-    Pokemon p7;
-    Pokemon p8;
-    Pokemon p9;
-    Pokemon p10;
-    Pokemon p11;
-    Pokemon p12; 
-    Time t1;
-    Time t2;
-    Time t3;
-    Time t4;
+    private float vidaTotal;
+//    Pokemon p1;
+//    Pokemon p2;
+//    Pokemon p3;
+//    Pokemon p4;
+//    Pokemon p5;
+//    Pokemon p6;
+//    Pokemon p7;
+//    Pokemon p8;
+//    Pokemon p9;
+//    Pokemon p10;
+//    Pokemon p11;
+//    Pokemon p12; 
+//    Time t1;
+//    Time t2;
+//    Time t3;
+//    Time t4;
 
     /**
      *declara time de pokemons
@@ -40,7 +40,7 @@ public class Treinador {
     /**
      *energia para usar habilidade
      */
-    public int mana = 100;
+    private int mana = 100;
 	
     /**
      *inicializa a funcao treinador
@@ -86,7 +86,7 @@ public class Treinador {
         int choice=-1;
         Scanner reader = new Scanner(System.in);  // Reading from System.in
         int ler;
-        System.out.println("Qual ataque vc quer utilizar? \n1- ♠ " + p.habilidades[0] + " - com custo 75mp, \n2- ♠ " + p.habilidades[1] + " - com custo 50mp \n3- ♠ " + p.habilidades[2] + " - com custo 25mp \n4- ♣ Passar a vez");
+        System.out.println("Qual ataque voce quer utilizar? \n1- ♠ " + p.habilidades[0] + " - com custo 75mp, \n2- ♠ " + p.habilidades[1] + " - com custo 50mp \n3- ♠ " + p.habilidades[2] + " - com custo 25mp \n4- ♣ Passar a vez");
         ler = reader.nextInt();
         choice=choice+ler;
         if(choice==0||choice==1||choice==2||choice==3){
@@ -103,5 +103,11 @@ public class Treinador {
         return choice;
     }
     
+    public int getMana(){
+        return mana;
+    }
     
+    public void setMana(int mana){
+        this.mana=mana;
+    }   
 }

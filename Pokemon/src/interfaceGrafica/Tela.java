@@ -39,6 +39,7 @@ public class Tela extends javax.swing.JFrame {
      * Creates new form Tela
      */
     public Tela() {
+        
         initComponents();
         escolherTime.setVisible(false);
         batalha.setVisible(false);
