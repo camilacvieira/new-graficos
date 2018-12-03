@@ -112,8 +112,14 @@ public class Pokemon {
             dano = dano * multiHabilidades[index];
             return dano;
         }
-        
-
-
+    
+    public float getDanoAtual(){
+        return danoAtual;
+    }
+    
+    public void setDanoAtual(float danoAtual){
+       this.danoAtual = danoAtual;
+    }
+    
 
 }
