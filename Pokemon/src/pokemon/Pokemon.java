@@ -90,7 +90,11 @@ public class Pokemon {
      *dano do pokemon
      */
     protected float dano;
-
+    
+    /**
+     *dano inicial do pokemon
+     */
+    protected float danoInicial=10;
   
        
         // 0-Agua ; 1-Eletrico ; 2-Fogo ; 3-Normal ; 4-Pedra ; 5-Planta ; 6-Psiquico
@@ -119,6 +123,10 @@ public class Pokemon {
     
     public void setDanoAtual(float danoAtual){
        this.danoAtual = danoAtual;
+    }
+    
+    public float getDanoInicial(){
+        return danoInicial;
     }
     
 

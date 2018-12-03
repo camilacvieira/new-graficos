@@ -15,22 +15,6 @@ import java.util.Scanner;
  */
 public class Treinador {
     private float vidaTotal;
-//    Pokemon p1;
-//    Pokemon p2;
-//    Pokemon p3;
-//    Pokemon p4;
-//    Pokemon p5;
-//    Pokemon p6;
-//    Pokemon p7;
-//    Pokemon p8;
-//    Pokemon p9;
-//    Pokemon p10;
-//    Pokemon p11;
-//    Pokemon p12; 
-//    Time t1;
-//    Time t2;
-//    Time t3;
-//    Time t4;
 
     /**
      *declara time de pokemons

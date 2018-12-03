@@ -66,7 +66,8 @@ public class Batalha {
             if(p2.getHealthPoints()==0){
             System.out.println(" ††† Treinador 2 O Pokemon "+p2.getNome()+" morreu!, próximo ††† ");
             }
-        }      
+        }
+        checaVantagem();
     }
     
     /**
@@ -77,7 +78,9 @@ public class Batalha {
         boolean flag = false;
         for(int i=0; i<p1.vantagens.size() ; i++){
             if(p1.vantagens.get(i) == p2.getTipo()){
-                 p1.setDanoAtual(15);
+                if(p1.danoAtual > p1.getDanoInicial())
+                    break;
+                p1.setDanoAtual(15);
                 flag = true;
                 break;
             }
@@ -86,6 +89,8 @@ public class Batalha {
         if(flag == false){
             for(int i=0; i<p2.vantagens.size() ; i++){
                if(p2.vantagens.get(i) == p1.getTipo()){
+                     if(p2.danoAtual > p2.getDanoInicial())
+                        break;
                     p2.setDanoAtual(15);
                     break;
                 }
@@ -97,7 +102,6 @@ public class Batalha {
      *determina quem vai atacar no round da batalhha
      */
     public void round(){
-        checaVantagem();
         System.out.println("=======================================================================");
         System.out.println("Ataque treinador 1:  ");
         System.out.println("Pokemon - " + p1.getNome());
@@ -140,7 +144,7 @@ public class Batalha {
                      System.out.println("♦♦♦ ManaPoint(mp) insuficiente,voce tem "+t1.getMana()+"ManaPoint(mp) Jogue novamente ♦♦♦");
                      choice=t1.escolheAtaque(p1);
                  }
-             }
+            }
         }    
         
         else{
