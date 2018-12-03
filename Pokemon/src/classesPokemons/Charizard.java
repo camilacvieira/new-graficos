@@ -26,7 +26,7 @@ public class Charizard extends TipoFogo {
         habilidades[0] ="FireBlast";
         habilidades[1]="Overheat";
         habilidades[2]="BlastBurn";
-
+        vantagem();
         
     }
     

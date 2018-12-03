@@ -26,7 +26,7 @@ public class Jolteon extends TipoEletrico {
         habilidades[0] ="ThunderShock";
         habilidades[1]="Thunderbolt";
         habilidades[2]="VoltSwitch";
-        
+        vantagem();
 
         
     }

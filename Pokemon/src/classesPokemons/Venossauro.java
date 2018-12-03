@@ -23,7 +23,7 @@ public class Venossauro extends TipoPlanta {
         habilidades[0] ="VineWhip";
         habilidades[1]="FrenzyPlant";
         habilidades[2]="RazorLeaf";
-
+        vantagem();
         
     }
     

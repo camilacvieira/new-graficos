@@ -75,18 +75,18 @@ public class Batalha {
     public void checaVantagem(){
      
         boolean flag = false;
-        for(int i=0; i<p1.vantagens.length ; i++){
-            if(p1.vantagens[i] == p2.getTipo()){
-                p1.setDanoAtual((float) (p1.danoAtual* (1.5)));
+        for(int i=0; i<p1.vantagens.size() ; i++){
+            if(p1.vantagens.get(i) == p2.getTipo()){
+                 p1.setDanoAtual(15);
                 flag = true;
                 break;
             }
         }
         
         if(flag == false){
-            for(int i=0; i<p2.vantagens.length ; i++){
-               if(p2.vantagens[i] == p1.getTipo()){
-                    p2.setDanoAtual((float) (p2.danoAtual* (1.5)));
+            for(int i=0; i<p2.vantagens.size() ; i++){
+               if(p2.vantagens.get(i) == p1.getTipo()){
+                    p2.setDanoAtual(15);
                     break;
                 }
            }
@@ -101,12 +101,10 @@ public class Batalha {
         System.out.println("=======================================================================");
         System.out.println("Ataque treinador 1:  ");
         System.out.println("Pokemon - " + p1.getNome());
-        System.out.println("dano - " + p1.getDanoAtual());
         ataque(1);
         System.out.println("=======================================================================");
         System.out.println("Ataque treinador 2:  ");
         System.out.println("Pokemon - " + p2.getNome());
-        System.out.println("dano - " + p2.getDanoAtual());
         ataque(2);
         pokemonAtual();
         System.out.println("=======================================================================");

@@ -23,7 +23,7 @@ public class Flareon extends TipoFogo {
         habilidades[0] ="FireSpin";
         habilidades[1]="Overheat";
         habilidades[2]="FireBlast";
-
+        vantagem();
         
     }
     

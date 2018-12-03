@@ -25,7 +25,7 @@ public class Onix extends TipoPedra {
         habilidades[0] ="RockThrow";
         habilidades[1]="HeavySlam";
         habilidades[2]="StoneEdge";
-        
+        vantagem();
     }
     
   

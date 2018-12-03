@@ -23,6 +23,7 @@ public class Vaporeon extends TipoAgua {
         habilidades[0] ="WaterGun";
         habilidades[1]="HydroPump";
         habilidades[2]="AquaTail";
+        vantagem();
     }
     
   

@@ -27,7 +27,7 @@ public class Blastoise extends TipoAgua {
         habilidades[0] ="FlashCannon";
         habilidades[1]="IceBeam";
         habilidades[2]="HydroPump";
-        
+        vantagem();
         
 
         

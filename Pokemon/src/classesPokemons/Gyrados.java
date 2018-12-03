@@ -24,7 +24,7 @@ public class Gyrados extends TipoAgua {
         habilidades[0] ="Waterfall";
         habilidades[1]="HydroPump";
         habilidades[2]="Outrage";
-
+        vantagem();
         
     }
     

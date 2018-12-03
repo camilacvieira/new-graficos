@@ -20,6 +20,7 @@ public class Squirtle extends TipoAgua {
            this.healthPoints =100;
         tipo = 0; // 0-Agua ; 1-Eletrico ; 2-Fogo ; 3-Normal ; 4-Pedra ; 5-Planta ; 6-Psiquico
         habilidades[0] = "Bubble"; habilidades[1] = "Water Pulse"; habilidades[2] = "Aqua Tail";
+        vantagem();
     }
     
   

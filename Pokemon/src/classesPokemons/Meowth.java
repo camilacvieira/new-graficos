@@ -28,7 +28,7 @@ public class Meowth extends TipoNormal {
         habilidades[0] ="Bite";
         habilidades[1]="Scratch";
         habilidades[2]="DarkPulse";
-        
+        vantagem();
     }
     
   

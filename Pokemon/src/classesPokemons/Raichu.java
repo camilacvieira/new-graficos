@@ -23,6 +23,7 @@ public class Raichu extends TipoEletrico {
         habilidades[0] ="ThunderPunch";
         habilidades[1]="WildCharge";
         habilidades[2]="Spark";
+        vantagem();
     }
     
   

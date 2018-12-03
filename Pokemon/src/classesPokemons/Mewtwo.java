@@ -26,7 +26,7 @@ public class Mewtwo extends TipoPsiquico {
         habilidades[0] ="Confusion";
         habilidades[1]="Psychic";
         habilidades[2]="FocusBlast";
-
+        vantagem();
         
     }
     

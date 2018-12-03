@@ -18,7 +18,7 @@ public class TipoNormal extends Pokemon implements TipoPokemon {
     public void vantagem() { // retornar array list (lita de tipos, pokemon)
          // 0-Agua ; 1-Eletrico ; 2-Fogo ; 3-Normal ; 4-Pedra ; 5-Planta ; 6-Psiquico
          // Sem vantagens.
-         vantagens = null;
+        
     }
 
 }

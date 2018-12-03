@@ -98,7 +98,7 @@ public class Pokemon {
     /**
      *vetor de vantanges contra outros tipos
      */
-        protected int[] vantagens; 
+       public ArrayList<Integer> vantagens = new ArrayList<Integer>(); 
 
    
         
