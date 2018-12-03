@@ -1,3 +1,2 @@
 # new-graficos
-new-graficos
-koe joao
+Qual classe que da input?
