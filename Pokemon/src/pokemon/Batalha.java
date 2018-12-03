@@ -123,7 +123,7 @@ public class Batalha {
         float dano = 0;
         
         if(numTreinador == 1){
-            System.out.println("♥ Vida do pokemon inimigo "+p2.getNome()+": " +p1.getHealthPoints());
+            System.out.println("♥ Vida do pokemon inimigo "+p2.getNome()+": " +p2.getHealthPoints());
             System.out.println("♦ ManaPoint(mp) Atual:"+t1.getMana());
             choice=t1.escolheAtaque(p1);
             if(p1.manaPoints[choice] <= t1.getMana()){
